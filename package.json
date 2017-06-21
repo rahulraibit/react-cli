@@ -1,6 +1,6 @@
 {
   "name": "react-component-cli",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "It will create basic template for your component",
   "main": "create-component.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "commander": "^2.9.0",
-    "progress": "^2.0.0"
+    "progress": "^2.0.0",
+    "react-templates-usp": "^1.0.5"
   }
 }
