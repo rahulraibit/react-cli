@@ -2,14 +2,14 @@
   "name": "react-component-cli",
   "version": "1.0.8",
   "description": "It will create basic template for your component",
-  "main": "create-component.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rahul",
   "license": "MIT",
   "bin": {
-    "create-container": "./container-command.js"
+    "create-container": "./commands/container-command.js"
   },
   "dependencies": {
     "chalk": "^1.1.3",

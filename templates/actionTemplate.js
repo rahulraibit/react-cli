@@ -3,7 +3,7 @@
  * @function dummy function
  * @description Handle the action for updating the reducer and for making API call
  */
-function Dummy() {
+export function Dummy() {
     return function (dispatch, getStore) {
         dispatch(
             {

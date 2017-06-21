@@ -1,7 +1,7 @@
 let InitialState = {}
-function ClassName(state = initialState, action) {
+export function ClassName(state = initialState, action) {
     switch (action.type) {
-        case DEFAULT: {
+        case 'DUMMY_ACTION_TYPE': {
 
         }
         default:
