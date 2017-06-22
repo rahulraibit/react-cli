@@ -19,11 +19,11 @@ exports.generateTemplate = function (templateName, fileName, type, replaceableIt
         // replace the className with user classname.
         var result = data;
         if (replaceableItem && replacedWith) {
-            console.log(replaceableItem, replacedWith)
             result = data.replace(replaceableItem, replacedWith);
         }
         // write the container template data to user created container.
         fs.writeFile(fileName + '.js', result, 'utf8', function (err) {
+            console.log(chalk.green(fileName + ' Has been created'));
         });
     });
 }

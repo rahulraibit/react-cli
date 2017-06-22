@@ -9,13 +9,13 @@
   "author": "rahul",
   "license": "MIT",
   "bin": {
-    "create-container": "./commands/container-command.js"
+    "react-cli": "./commands/index.js"
   },
   "dependencies": {
     "chalk": "^1.1.3",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
-    "commander": "^2.9.0",
-    "progress": "^2.0.0"
+    "progress": "^2.0.0",
+    "vorpal": "^1.12.0"
   }
 }
