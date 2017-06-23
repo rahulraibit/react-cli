@@ -1,0 +1,28 @@
+base: 
+    add: Add
+    edit: Edit
+    delete: Delete
+    save: Save
+    cancel: Cancel
+    confirm: Confirm
+    continue: Continue
+    logout: Logout
+    retry: Retry
+    view: View
+    yes: Yes
+    no: No
+    ok: Ok
+    dismiss: Dismiss
+    undoChanges: Undo Changes
+    adminAccount: Admin Account
+    customerProfile: Customer Profile
+    userProfile: User Profile
+    signOut : Sign Out
+    settings: Settings
+    userRoleList: User Role List
+    userGroupList: User Group List
+    userList: User List
+    siteList: Site List
+    editProfile: Edit Profile
+    unknown: Unknown
+    customerList: Customer List

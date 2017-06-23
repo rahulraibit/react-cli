@@ -1,0 +1,30 @@
+QueueManager:
+  FirmwareUpgrade: "Firmware Upgrade on {id}"
+  ExecBumpTest: "Bump Test on {id}"
+  ExceCalTest: "Calibration test on {id}"
+  DataDownload: "Data Downloaded on {id}"
+  ReportGeneration: "{id} Report Creation Failed"
+
+  notification:
+    FirmwareUpgrade:
+      success: "Firmware Upgrade Completed for {id}"
+      error: "Firmware Upgrade Failed for {id}"
+    ExecBumpTest:
+      success: "Bump Test Completed for {id}"
+      error: "Bump Test Failed for {id}"
+      ExecAborted: "Bump Test Failed for {id}: Aborted"
+      CommandExecutionInProgress: "Bump Test Failed for {id}: Another command in Progress"
+      DeviceOffline: "Bump Test Failed for {id}: Device went offline"
+    ExceCalTest:
+      success: "Calibration Test Completed for {id}"
+      error: "Calibration Test Failed for {id}"
+      ExecAborted: "Calibration Test Failed for {id}: Aborted"
+      CommandExecutionInProgress: "Calibration Test Failed for {id}: Another command in Progress"
+      DeviceOffline: "Calibration Test Failed for {id}: Device went offline"
+    DataDownload:
+      success: "Data Download Completed for {id}"
+      error: "Data Download Failed for {id}"
+    ReportGeneration:
+      success: "{reportName} Report Created"
+      error: "{reportName} Report Creation Failed"
+      subMessage: "{reportType} of {reportName}"

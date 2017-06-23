@@ -1,0 +1,27 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+/*.custom-dialog-modal {
+  .custom-dialog-modal {
+    width: 30%;
+    height: 30%;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .modal-content {
+    border: 5px solid #a3a3be
+  }
+  .modal-title {
+    font-weight: bold;
+  }
+}*/
+
+.confirmation-box {
+  .message-body {
+    margin-bottom: $baseUnit;
+    p {
+      padding-top: $padding;
+    }
+  }
+}

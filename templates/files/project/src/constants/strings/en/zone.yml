@@ -1,0 +1,6 @@
+zone:
+ details:
+  zoneFullName: Zone Full Name
+  zoneShortName: Zone Short Name
+  addZone: ADD ZONE
+  saveZone : SAVE

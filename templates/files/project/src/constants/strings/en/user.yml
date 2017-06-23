@@ -1,0 +1,44 @@
+user:
+   status: Active
+   deviceAssignedLabel: devices assigned
+   firstNameLabel: first name
+   middleNameLabel : middle name
+   lastNameLabel : last name
+   emailLabel : email
+   userName: User Name
+   address1: Address 1
+   address2: Address 2
+   city: City
+   state: State/Province
+   zip: Zip Code
+   country: Country/Region
+   employeeIDLabel: Employee Id
+   phoneNumberLabel : Phone
+   associatedUserGroupLabel : Associated user groups
+   primaryGroupLabel: Primary group
+   associatedSitesLabel : Associated Sites
+   associatedUserRolesLabel: Associated user roles
+   userTypeLabel: USP User
+   deactivateTitle: Deactivate User
+   deactivateMessage: Deactivated user will not be available for any USP operations.
+   deactivateQuestion: Do you want to continue deactivation ?
+   deleteTitle: Delete User
+   deleteMessage: This action will permanently delete all data of the user and it is irrecoverable. 
+   deleteQuestion: Do you want to continue deletion ?
+   reactivateTitle: Re-Activate User
+   changePassword: Change Password
+   currentPassword: Current Password
+   newPassword: New Password
+   passwordMustHave: Password must have...
+   passwordCondition1: Password must have a minimum of 8 characters 
+   passwordCondition2: At least 1 character from all the following types
+   passwordCondition3: Must not match with the current password
+   upperCase: Upper Case
+   lowerCase: Lower case
+   number: Number
+   specialCharacter: Special character
+   passwordWarning: This page will not save if the Current Password field is incomplete or incorrect. Please leave the field blank if you are not changing your password.
+   reactivateMessage: Once re-activated, this User will be visible in Active User List from now onwards.
+   reactivateQuestion: Do you want to continue Re-activation ?
+   selectOrType: Select or Type
+   nameOrEmail: Type Name or Email

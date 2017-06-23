@@ -1,0 +1,370 @@
+@import 'variables';
+@import 'mixins';
+
+.plain-button {
+  &:active:focus,
+  &:focus,
+  &:hover {
+    border-color: $primaryBorderColor;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.usp-scrollable-area {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.btn-small {
+  padding: $baseUnit / 2 $baseUnit;
+}
+
+.usp-modal {
+  .modal {
+    text-align: center;
+    padding: 0 !important;
+  }
+
+  .modal:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    @include vertical-align;
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+.modal-dialog {
+  .modal-title {
+    @include boldFont($fontSizeHuge);
+
+    .header {
+      @include boldFont($fontSizeHuge);
+      @include vertical-align(center);
+
+      .info,
+      .subheader {
+        font-size: $fontSizeLarge;
+      }
+
+      .info {
+        color: $headerColor;
+      }
+    }
+  }
+
+  .modal-header {
+    .close {
+      font-size: $fontSizeLarge * 2;
+      line-height: $padding;
+      margin: 0;
+    }
+  }
+}
+
+.placeholderLabel {
+  color: $focusedInputTextColor;
+  font-size: $fontSize;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: $baseUnit / 2;
+  top: $baseUnit;
+  padding: 0 $baseUnit / 2;
+  overflow: hidden;
+  white-space: nowrap;
+  @include transition(all, 0.2s, ease);
+
+  span {
+    color: $errorColor;
+    padding-right: 4px;
+    margin: 0;
+    font-size: 18px;
+    display: none;
+  }
+}
+
+label {
+  @include paraFont($fontSizeSmall);
+  color: $headerColor;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.form-control ~ label {
+  position: absolute;
+  pointer-events: none;
+  left: $baseUnit / 2;
+  top: $baseUnit;
+  padding: 0 $baseUnit / 2;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 3;
+  background-color: $primaryBgColor;
+  @include transition(all, 0.2s, ease);
+}
+
+.form-control[disabled] ~ label {
+  color: $disabledColor;
+}
+
+input,
+select {
+  &:focus ~ label,
+  &[disable] ~ label,
+  &[placeholder] ~ label,
+  &[readonly] ~ label {
+    top: $fieldLabelPositionOnValid;
+  }
+}
+
+input {
+  &:not([value='']) ~ label {
+    top: $fieldLabelPositionOnValid;
+  }
+}
+
+input[type="radio"],
+input[type='checkbox'] {
+  & ~ label {
+    top: 0;
+    @include boldFont($fontSize);
+    text-transform: inherit;
+  }
+}
+
+.form-control {
+  &::-webkit-input-placeholder{ @include inputPlaceholder(); }
+  &:-moz-placeholder { @include inputPlaceholder();}
+  &::-moz-placeholder {@include inputPlaceholder(); }
+  &:-ms-input-placeholder { @include inputPlaceholder(); }
+}
+
+.error-message,
+.help-block {
+  @include paraFont($fontSizeSmaller);
+  line-height: $textLineHeight;
+  padding-left: $baseUnit;
+  display: inline-block;
+}
+
+.error-message {
+  color: $errorColor;
+}
+
+.help-block {
+  color: $darkText;
+}
+
+.error-message + .help-block {
+  display: none;
+}
+
+.error-message ~ div > select,
+.error-message ~ input {
+  border-color: $errorColor !important;
+}
+
+.cards {
+  box-shadow: $cardBoxShadow;
+  padding: $baseUnit + 5;
+  margin: $baseUnit/2 + 2;
+
+  .header {
+    @include boldFont();
+    text-transform: initial;
+  }
+
+  .card-header.header {
+    @include boldFont($fontSizeHuge);
+    margin-bottom: $baseUnit;
+    @include vertical-align(center);
+
+    .subheader {
+      font-size: $fontSize;
+    }
+  }
+}
+
+// TO BE REMOVED (Current used in textarea)
+// .usp-ui-component {
+//   position:relative;
+//   display: table;
+//   border-collapse: separate;
+//   width: 100%;
+//   input, textarea, select {
+//     @include boldFont($fontSize);
+//     padding:($baseUnit + 5) $baseUnit ($baseUnit / 2);
+//     display:block;
+//     border:$defaultBorder;
+//     width: 100%;
+//     border-radius: 0;
+//     box-shadow: none;
+//     &:focus {
+//       outline:none;
+//       border: $focusedBorder;
+//         box-shadow: none;
+//     }
+
+//     &:focus ~ label, &:valid ~ label {
+//       @include valid-input-label();
+//     }
+//   }
+
+//   &.readonly > label {
+//     @include valid-input-label();
+//   }
+
+//   &.required > label span {
+//     display: inline-block;
+//   }
+
+//   label {
+//     @extend .placeholderLabel;
+//   }
+// }
+
+// Heading styles
+.page-heading {
+  font-size: 1.2em;
+  font-weight: $fontBold;
+}
+
+.group-separator {
+  margin-bottom: 25px;
+}
+
+.section-heading {
+  @include extraBoldFont(16px);
+  // font-size: 1.1em;
+  // font-weight: $fontBold;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.tab-heading {
+  font-size: 1.2em;
+}
+
+.link {
+  @include link();
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.selected-color {
+  color: $selectedColor;
+}
+
+.text-center {
+  text-align: center;
+  display: inline-block;
+}
+
+.main-section {
+  margin-top: $baseUnit;
+}
+
+.sub-section {
+  padding-left: $subSectionPadding;
+}
+
+.section-title {
+  @include boldFont($fontSizeLarge);
+
+  &.no-top {
+    margin-top: 0;
+  }
+}
+
+hr {
+  margin: $padding 0;
+  border: 0;
+  border-top: $horizontalLineBorder;
+}
+
+.white-spaces-pre {
+  white-space: pre;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.padding {
+  padding: $padding;
+}
+
+.padding-top {
+  padding-top: $padding;
+}
+
+.padding-bottom {
+  padding-bottom: $padding;
+}
+
+.padding-left {
+  padding-left: $padding;
+}
+
+.padding-right {
+  padding-right: $padding;
+}
+
+.verticalLine {
+  border-right: 1px solid $hr-color;
+}
+
+.disable-select {
+  user-select: none;
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.high-status {
+  color: $testFailureColor;
+}

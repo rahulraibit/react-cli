@@ -1,0 +1,353 @@
+@import './variables';
+@import './mixins';
+
+$doubleBasePadding: $baseUnit * 2;
+$modalSmallWidth: 515px;
+$modalLargeWidth: 1015px;
+
+/*
+* Overriding the modal bootstrap class to align all the modal at the center of the page
+*/
+
+.modal {
+  text-align: center;
+  padding: 0 !important;
+  &.in.fade {
+    overflow-y: hidden;
+  }
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+  /* Adjusts for spacing */
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  &.modal-sm {
+     width: $modalSmallWidth;
+  }
+}
+
+//overriding close icon and the hover state of it
+.modal-content {
+  border-width: $modalBorder;
+  border-color: rgba(0,0,0,.1);
+
+  .modal-header {
+    padding-left: $doubleBasePadding;
+    padding-top: $doubleBasePadding;
+    padding-bottom: $doubleBasePadding - 10; // text adjustment
+    //TODO: Should be removed and closeButton property to be used
+    .close {
+      opacity: 1;
+
+      span {
+        display: none;
+      }
+
+      &:before {
+        content: '';
+        @include createIconContainer( './../../assets/images/utilities/icon_close@1x.png', 16px, 16px);
+        position: absolute;
+        top: $baseUnit;
+        right: $baseUnit;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .modal-body { padding: $baseUnit $doubleBasePadding $doubleBasePadding $doubleBasePadding }
+  .modal-footer {
+    padding: $doubleBasePadding;
+  }
+}
+
+.grid-modal .modal-body {
+  padding-left: 0;
+  padding-right: 0;
+
+  .modal-section {
+    padding-left: $doubleBasePadding;
+    padding-right: $doubleBasePadding;
+  }
+}
+
+.header .nav-tabs {
+  > li {
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:focus,
+      &:hover {
+        outline: none;
+        color: $PrimaryTextColor;
+        border-color: transparent;
+        font-family: $fontFamilyMedium;
+        border-bottom: 3px solid $nav-tabs-active-link-hover-border-color;
+      }
+    }
+
+    > a {
+      color: $focusedInputTextColor;
+      font-family: $fontFamilyMedium;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.tab-pane {
+  margin-top: $padding;
+}
+
+.nav.nav-tabs a {
+  font-size: 1.2em;
+  padding-bottom: $baseUnit/2;
+}
+
+//Breadcrumb Styles
+.breadcrumb {
+  background-color: $primaryBgColor;
+
+  li {
+    font-size: 1.4em;
+    font-family: $fontFamilyBold;
+
+    &,
+    &:focus {
+      color: $PrimaryTextColor !important;
+    }
+
+  }
+}
+
+// Button Styles
+@mixin button-variant($color, $background, $border, $hoverColor, $hoverBackground, $hoverBorder, $activeColor, $activeBackground, $activeBorder, $disabledColor, $disabledBackground, $disabledBorder) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &.focus,
+  &:focus {
+    color: $activeColor;
+    background-color: $activeBackground;
+    border-color: $activeBorder;
+  }
+
+  &:hover {
+    color: $hoverColor;
+    background-color: $hoverBackground;
+    border-color: $hoverBorder;
+  }
+
+  &.active,
+  &:active,
+  .open > &.dropdown-toggle {
+    color: $activeColor;
+    background-color: $activeBackground;
+    border-color: $activeBorder;
+
+    &.focus,
+    &:focus {
+      color: $activeColor;
+      background-color: $activeBackground;
+      border-color: $activeBorder;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    color: $disabledColor;
+    background-color: $disabledBackground;
+    border-color: $disabledBorder;
+    cursor: default;
+
+    &.focus,
+    &:focus,
+    &:hover {
+      color: $disabledColor;
+      background-color: $disabledBackground;
+      border-color: $disabledBorder;
+      cursor: default;
+    }
+  }
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-bg, $btn-primary-color, #1272B2, #1272B2, $btn-primary-color, #0A4166, #0A4166, #C0C0C0, #E0E0E0, #E0E0E0);
+}
+
+.btn-secondary {
+  @include button-variant($btn-primary-bg, $btn-primary-color, $btn-primary-bg, #1272B2, $btn-primary-color, #1272B2, #0A4166, $btn-primary-color, #0A4166, #C0C0C0, $btn-primary-color, #E0E0E0);
+}
+
+.btn-tertiary {
+  @include button-variant($btn-primary-bg, $btn-primary-color, $btn-primary-color, #1272B2, $btn-primary-color, $btn-primary-color, #0A4166, $btn-primary-color, $btn-primary-color, #C0C0C0, $btn-primary-color, $btn-primary-color);
+}
+
+.btn {
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  border-width: 2px;
+
+  &,
+  &.active,
+  &:active {
+    &.focus,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.active,
+  &:active {
+    box-shadow: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] {
+    cursor: default;
+  }
+}
+
+.fade {
+  -webkit-transition: opacity .10s linear;
+  -o-transition: opacity .10s linear;
+  transition: opacity .10s linear;
+}
+
+// Addon styles
+.input-group-addon {
+  padding: $baseUnit 2 * $baseUnit;
+  @include boldFont;
+
+  &:first-child {
+    border: 1px solid $primaryBorderColor;
+    background-color: $primaryBgColor;
+    border-left: none;
+  }
+}
+
+.input-group-addon[disabled] {
+  color: $disabledColor;
+  border: 1px solid $inactiveColor;
+}
+
+// Form feild styles
+.form-control {
+  @include boldFont($fontSize);
+  color: $inputTextColor;
+  border-radius: 0;
+  padding: $baseUnit $baseUnit ($baseUnit / 2);
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.icon-input {
+    padding-right: $baseUnit * 3;
+  }
+
+  &[readonly] {
+    visibility: hidden;
+  }
+}
+
+.form-control[disabled] {
+  border: 1px solid $inactiveColor;
+}
+
+.help-block {
+  margin: 0;
+}
+
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  background-color: $primaryBgColor;
+  cursor: default;
+  color: $disabledTextColor;
+}
+
+.form-group {
+  margin-bottom: $baseUnit;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:focus input:-webkit-autofill,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
+  border: 1px solid $primaryBorderColor;
+  -webkit-text-fill-color: $PrimaryTextColor;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 1000px $primaryBgColor inset;
+}
+
+input[readonly] {
+  border: none;
+}
+
+.alert-danger {
+  background-color: $primaryBgColor;
+  border-color: $primaryBgColor;
+  color: $errorColor;
+}
+
+.alert-default {
+  background-color: $primaryBorderColor;
+  border-color: $primaryBorderColor;
+  color: $activeComponentColor;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.alert-warning {
+  background-color: $pillBgColorWarning;
+  color: $inputTextColor;
+  border-color: $pillBgColorWarning;
+}
+
+.alert-success {
+  background-color: $alertSucccessColor;
+  color: $secondaryTextColor;
+  border-color: $alertSucccessColor;
+}
+
+.alert-danger {
+  background-color: $alertFailureColor;
+  color: $secondaryTextColor;
+  border-color: $alertFailureColor;
+}
+
+.badge {
+  text-transform: uppercase;
+  @include boldFont ($fontSizeSmaller);
+  padding: 5px 7px 3px;
+}
+
+.caret {
+  @include createIcon( './assets/images/dropdown_carat_active.png', 6px, 9px, 6px, 9px);
+  border: none;
+}
+@import './typeahead'

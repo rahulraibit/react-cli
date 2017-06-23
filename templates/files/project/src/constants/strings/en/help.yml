@@ -1,0 +1,6 @@
+helpText:
+  typeHere: "Type Here..."
+  validation:
+    range: "{min} - {max}" 
+    maxDigitLimit: "Max {maxLen} digit allowed"
+    maxCharLimit: "Max {maxLen} characters allowed"

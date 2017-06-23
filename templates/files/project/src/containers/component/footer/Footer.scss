@@ -1,0 +1,25 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.page-footer {
+  margin-top: $baseUnit * 2;
+  background: $primaryBgColor;
+
+  &.no-padding {
+    padding: ($baseUnit * 2) 0 0;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+
+  &.neg-margin {
+    margin-left: -$margin;
+    margin-right: -$margin;
+  }
+
+  &.no-separator {
+    border: none;
+    padding-top: 0;
+  }
+}

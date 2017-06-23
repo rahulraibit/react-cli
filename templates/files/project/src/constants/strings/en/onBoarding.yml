@@ -1,0 +1,28 @@
+onBoarding:
+ activation:
+    header: Enter Activation Code
+    info: Please use the email address the activation code was sent to and the activation code included in the email.
+ aggreement:
+    header: Legal Agreement
+    info : Please review the legal agreement and accept the terms & conditions in order to proceed.
+    legalTerm: These terms and conditions shall govern your use of our website. By using our website, you accept these terms and conditions in full accordingly, if you disagree with these terms and conditions or any part of these terms and conditions, you must not use our website. If you register with our website or use any of our website services, we will ask you to expressly agree to these terms and conditions.Warning Use of USP product without the credit, or without purchasing a licence, is an infringement of copyright.
+    acceptCondition: I have read and accept the terms and conditions. 
+ createAccount:
+    header: Create Account
+    info: Please fill in all fields in order to create an acocunt. You will receive an activation email with a link to securely access your account and login to Unisoft Platform
+    passwordHelpers: 
+        eightCharacter: Password must have a minimum of 8 characters.
+        combination: Password must have a combination of all 4 attributes.
+        uppercase : Uppercase
+        lowercase : Lowercase
+        number :   Numbers:0123456789
+        special :  Special characters:!@@#$%^&*()
+ linkExpired : 
+    header: Activation Link Has Expired
+    info :   This activation link that you click on has already expired. Please click on the button below to resend the activation email to the following address
+
+ emailSent :
+    header: Activation Link Has Expired
+    info : This activation link that you click on has already expired. Please click on the button below to resend the activation email to the following address
+    sentConfirmation: ACTIVATION EMAIL SENT!
+    userSuggestion: Please check your email

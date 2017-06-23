@@ -1,0 +1,219 @@
+@import 'variables';
+
+//element transition
+@mixin transition($property: all, $duration: .5s, $timingFunction: ease) {
+    -webkit-transition: $property $duration $timingFunction;
+    -moz-transition: $property $duration $timingFunction;
+    -o-transition: $property $duration $timingFunction;
+    transition: $property $duration $timingFunction;
+}
+
+//vertical align
+@mixin vertical-align-old($value: 50%) {
+  position: relative;
+  top: $value;
+  @include move-y-axis(-50%);
+}
+
+//move element in y axis
+@mixin move-y-axis($value) {
+  -webkit-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -moz-transform: translateY($value);
+  transform: translateY($value);
+}
+
+//move element in x axis
+@mixin move-x-axis($value) {
+  -webkit-transform: translateX($value);
+  -ms-transform: translateX($value);
+  -moz-transform: translateY($value);
+  transform: translateX($value);
+}
+
+//set inner elenemt width equal to container width
+@mixin setToContainerWidth($value) {
+  left: -($value);
+  width: calc(100% + #{2 * $value});
+}
+
+// generic transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+// skew
+@mixin customBorder ($thickness:1px, $style:solid, $color:#000) {
+   border: $thickness $style $color;
+}
+
+@mixin customBorderTop ($thickness:1px, $style:solid, $color:#000) {
+   border-top: $thickness $style $color;
+}
+
+@mixin customBorderBottom ($thickness:1px, $style:solid, $color:#000) {
+   border-bottom: $thickness $style $color;
+}
+
+
+@mixin boldFont ($size : $fontSize){
+    font-family: $fontFamilyBold;
+    font-size : $size;
+    letter-spacing: -.25px;
+}
+
+@mixin extraBoldFont ($size : $fontSizeLarge){
+    font-family: $fontFamilyExtraBold;
+    font-size : $size;
+    letter-spacing: -.25px;
+}
+
+@mixin mediumFont ($size : $fontSizeSmall){
+    font-family: $fontFamilyMedium;
+    font-size : $size;
+}
+
+@mixin paraFont ($size : $fontSizeSmall){
+    font-family: $fontFamily;
+    font-size : $size;
+    // line-height: 15px;
+}
+
+@mixin link() {
+    font-size : .9em;
+    color : #888;
+    cursor: pointer;
+}
+
+@mixin valid-input-label($bU:$baseUnit,$fs:$fontSizeSmall, $fITC:$headerColor, $pBC : $primaryBgColor){
+  top:-($bU - 3);
+  font-size:$fs;
+  color:$fITC;
+  background-color:$pBC;
+  padding: 0 $bU / 2;
+  z-index : 2;
+}
+
+@mixin createIcon($img, $totalHeight, $totalWidth, $imageHeight, $imageWidth) {
+  background:url($img) no-repeat top left;
+  width : $imageWidth;
+  height : $imageHeight;
+  display: block;
+  margin-left : ($totalWidth - $imageWidth) /2;
+  margin-top : ($totalHeight - $imageHeight)/2;
+}
+
+
+@mixin createIconContainer($img, $height, $width) {
+  background:url($img) no-repeat top left;
+  width : $width;
+  height : $height;
+  background-size: contain;
+  display: inline-block;
+}
+
+@function convertPxToRem($valueInPx) {
+  @return #{($valueInPx / 16)}rem;
+}
+
+@mixin customGridColumn($colWidth) {
+  -webkit-box-flex: inherit;
+  -webkit-flex: inherit;
+  flex: inherit;
+  width: $colWidth;
+}
+
+// @mixin pxToRem($property,$valueInPx){
+//   $remValue : convertPxToRem($valueInPx);
+//   @debug $valueInPx;
+//   #{$property} : $remValue;
+// }
+
+// center, flex-start, flex-end, stretch
+@mixin vertical-align($align:center){
+  display: flex;
+  align-items: $align;
+}
+
+// center, flex-start, flex-end, space-between, space-around
+@mixin justify-content($justify:space-between){
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin helpTextFont($size: $fontSizeSmaller) {
+  font-family: $fontFamily;
+  font-size: $size;
+  letter-spacing: -.25px;
+}
+
+@mixin componentLabel($size: $fontSizeSmall){
+  font-family: $fontFamily;
+  font-size: $size;
+  color : $headerColor;
+}
+
+@mixin addEllipsis(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+@mixin modalBorder($size: $modalBorder){
+  border-width: $size;
+  border-color: rgba(0,0,0, .1);
+}
+
+@mixin inputPlaceholder(){
+  @include paraFont($fontSize);
+  color: $headerColor;
+}
+
+@mixin leftBorderRadius($rad){
+  border-top-left-radius: $rad;
+  border-bottom-left-radius: $rad;
+}
+
+@mixin rightBorderRadius($rad){
+  border-top-right-radius: $rad;
+  border-bottom-right-radius: $rad;
+}
+
+@mixin borderRadius($rad) {
+  border-radius: $rad;
+}
+
+@mixin textColor($color){
+  color: $color;
+}

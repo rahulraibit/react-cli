@@ -12,6 +12,7 @@
     "react-cli": "./commands/index.js"
   },
   "dependencies": {
+    "fs-extra": "^3.0.1",
     "vorpal": "^1.12.0"
   }
 }

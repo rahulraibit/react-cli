@@ -1,0 +1,148 @@
+// Global Variables
+
+// Fonts
+$fontFamily: "HWBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontFamilyBold: "HWBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontFamilyExtraBold: "HWExtraBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontFamilyMedium: "HWMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontFamilyFontAwesome: "FontAwesome";
+$fontSize: 13px;
+$fontSizeSmall: 12px;
+$fontSizeNormal: 14px;
+$fontSizeLarge: 16px;
+$fontSizeHuge: 20px;
+$fontSizeSmaller: 11px; // works with SansMedium
+$fontBold: 600;
+$fontNormal: 400;
+
+// Base Measurements
+$baseUnit: 10px;
+$base-padding: $baseUnit / 2;
+$base-margin: $baseUnit / 2;
+
+$padding: 15px;
+$margin: 15px;
+$subSectionPadding: 35px;
+$paddingTopBottom: 5px;
+
+$marginTopBottom: 15px;
+$marginLarge: 25px;
+
+$lineHeight: 1.42857;
+$textLineHeight: 17px;
+$dropDownMenuItemLineHeight: 1.8;
+$lineHeightCalender: 17px;
+
+// Base Colors
+$color: #333333;
+$primaryBgColor: #FFFFFF;
+$linkColor: #1692E5;
+$PrimaryTextColor: #000;
+$secondaryTextColor: #fff;
+$primaryIconColor: #666666;
+$selectedColor: #1692E5;
+$errorColor: #ff0000;
+
+// Component State color
+$activeColor: #1792E5;
+$hoveredColor: #1272B2;
+$clickedColor: #0A4166;
+$inactiveColor: #F0F0F0;
+$inactiveComponentColor: #E0E0E0;
+$activeComponentColor: #707070;
+$focusComponentLinkColor: $linkColor;
+$inputTextColor: #303030;
+$focusedInputTextColor: #999;
+$popoverHeaderColor: #4A4A4A;
+
+$primaryBorderColor: $inactiveComponentColor;
+$primaryBorder: 1px solid $primaryBorderColor;
+$horizontalLineColor: #f0f0f0;
+$horizontalLineBorder: 1px solid $horizontalLineColor;
+$headerColor: #666666;
+
+$containerBorder: #C8C8C8;
+$disabledIconColor: #C0C0C0;
+$disabledTextColor: #C0C0C0;
+$disabledColor: #C0C0C0;
+$popOverBorderColor: #B7B7B7;
+
+$btn-primary-disabled-bg: #E0E0E0;
+$btn-primary-disabled-color: #C0C0C0;
+$btn-primary-hover-bg: #1272B2;
+$btn-primary-active-bg: #0A4166;
+
+$fontTopMarginFix: 2.5px;
+
+// Cards
+$cardBoxShadow: 0 0 4px 0 rgba(0,0,0,0.21);
+
+/* Configuration Page Common Variables */
+$minRowHeight: 50px;
+$hr-color: #E0E0E0;
+$iconGray: #999;
+
+/*UI Field variables*/
+$focusedBorderColor: $selectedColor;
+$dropdownMenuBackgroundColor: #F5F5F5;
+$defaultBorder: solid 1px $primaryBorderColor;
+$focusedBorder: solid 1px $focusedBorderColor;
+$errorBorder: solid 1px $errorColor;
+$disbledBorder: solid 1px $disabledColor;
+
+$darkText: $activeComponentColor;
+
+// Pills
+$pillMaxWidth: 155px;
+$pillsTextColor: #1272B2;
+$pillBorderRadius: 3px;
+$pillBgColor: #D1E9FA;
+$pillBgColorWarning: #ffd153;
+$pillBgColorAlarm: #b9261c;
+$pillBgColorFault: #F0793D;
+$pill-success-color: #98c260;
+$pill-fault-color: #f58d4d;
+$disabledPillBgColor: #E4E4E4;
+
+// slider
+$sliderBarColor: #B0B0B0;
+// $sliderDisabledColor: #C0C0C0;
+
+$primaryComponentHeight: 33px;
+$primaryComponentWidth: 235px;
+$defaultComponentWidth: 100%;
+$autoCompleteSuggestionBorderBottom: #E1E1E1;
+
+$alternateErrorColor: #EF463B;
+
+$smallPadding: 3px;
+$halfPercent: 50%;
+$overFlowHeight: 150px;
+$largeModalWidth: 85%;
+$modalBorder: 8px;
+
+$fieldLabelPositionOnValid: -7px;
+
+$tabDefaultColor: #F3F3F3;
+$tabHoverColor: #C7DFF0;
+
+$headerHeight: 28px;
+$checkboxSize: 16px;
+
+/*Grid variables*/
+$gridPrimaryBgColor: #707070;
+$gridSecondaryBgColor: #e2e2e2;
+$gridOddItemPrimaryBgColor: #FFFFFF;
+$gridEvenItemPrimaryBgColor: #F9F9F9;
+$gridHeadingPrimaryColor: #FFFFFF;
+$gridHeadingSecondaryColor: #5B5B5B;
+$summaryGridBgColor: #E8F4FC;
+$headerLabelBackground: #f7f7f7;
+$helpTextColor: #606060;
+$alertFailureColor: #E56048;
+$alertSucccessColor: #7EB338;
+$testFailureColor: #EE3124;
+$session-header-bg-color: #d8d8d8;
+
+$borderRadius: 50%;
+$modal-overflow-height: 500px;

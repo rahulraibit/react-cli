@@ -1,0 +1,12 @@
+autoRae:
+  details:
+    lotNumber: LOT NUMBER
+    expiry: EXPIRY
+    gas1: GAS 1
+    gas2: GAS 2
+    gas3: GAS 3
+    gas4: GAS 4
+    concentration: CONCENTRATION
+    purgeTime: PURGE TIME
+    soakTime: SOAK TIME
+    passcode: PASSCODE

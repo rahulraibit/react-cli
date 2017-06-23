@@ -1,0 +1,198 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'flex';
+@import 'icons';
+@import 'bootstrap.styles.override';
+
+$easePeriod: .1s;
+$easeInFunction: ease-in;
+$easeOutFunction: ease-out;
+$transitionProperty: all;
+
+$navBottomPadding: 20px;
+/* Toggle Styles */
+$navWidth: 64px;
+$breadcrumbHeight: 46px;
+
+.container {
+  width: 100%;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  @extend .stretch-column-items;
+
+  & > div {
+    flex: 1;
+  }
+
+  .usp-container {
+    width: 100%;
+    min-width: 1200px;
+    min-height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    .page-container {
+      height: 100%;
+      //margin-left : 0;
+
+      .wrapper {
+        overflow: hidden;
+
+        .sidebar {
+          z-index: 10;
+          position: absolute;
+          top: 0;
+          width: $navWidth;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          background: lightgreen;
+        }
+
+        .page-content {
+          padding-left: $navWidth;
+          position: absolute;
+          top: 0;
+          left: 30px;
+          right: 30px;
+          bottom: 0;
+        }
+
+        .page-content,
+        .sidebar {
+          @include transition($transitionProperty, $easePeriod, $easeInFunction);
+        }
+
+        .breadcrumb-wrapper {
+          width: auto;
+        }
+
+        .page-content-wrapper {
+          width: auto;
+          height: 100%;
+          padding: ($baseUnit * 2) ($baseUnit / 2);
+
+          .footer-bottom {
+            margin-bottom: ($breadcrumbHeight + 4 * $baseUnit);
+          }
+        }
+
+        &.toggled {
+          .sidebar {
+            left: -1 * $navWidth;
+          }
+
+          .page-content {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+input {
+  font-family: $fontFamily;
+}
+
+b {
+  font-family: $fontFamilyBold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $baseUnit;
+  margin-bottom: $baseUnit;
+  text-transform: capitalize;
+  line-height: 1;
+  @include boldFont($fontSize);
+}
+
+h3 {
+  font-size: $fontSizeLarge;
+
+  .sub-heading {
+    @include paraFont($fontSizeLarge);
+    text-transform: initial;
+
+    &:before {
+      content: ' ';
+    }
+  }
+}
+
+div,
+label,
+p {
+  font-family: $fontFamily;
+}
+
+.usp-scrollbar {
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-resizer,
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-corner,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-track-piece {
+    width: 8px;
+    height: 8px;
+    margin: 1px 2px;
+    -webkit-box-shadow: none;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    background-color: #DDD;
+  }
+}
+
+.modal-body{
+  @extend .usp-scrollbar;
+}
+
+.img-container {
+  width: 100%;
+  max-height: 80px;
+  @extend .flex-center;
+
+  img {
+    max-height: 80px;
+  }
+}
+
+.usp-page-tm-0 {
+  margin-top: $baseUnit;
+}
+
+.usp-page-tm-1 {
+  margin-top: 3 * $baseUnit;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+@import 'common';

@@ -1,0 +1,57 @@
+errors:
+  validation:
+    required: This field is required
+    maxLength: Maximum {max} characters allowed
+    minLength: Minimum {min} characters required 
+    fixedLengthDigit: Must be {len} digits number
+    fixedLength: Must be {len} characters long
+    email: Invalid email address       
+    maxLimit: Value should not exceed {maxLimit}
+    maxIntLimit: Value should not exceed max integer limit
+    minLimit: Value should not be below {minLimit}
+    number: Must be a number
+    range: Value must be between {minValue} & {maxValue}
+    alphanumeric: Must be alphanumeric
+    nospace: No spaces are allowed
+    port: Invalid port number
+    time: Invalid time, please use HH:mm format
+    unmatch: Values do not match
+    patternMismatch: Did not match the pattern
+    address: Must be alphanumeric
+    macid: Not a valid mac address
+    sensorSerialNumber: Length should be 0 or 12 characters
+    ipAddress: Must be a valid IP address
+    decimalLength: Maximum decimal length exceeded
+    wifiWepLength: Length should be 10 or 26 Hex characters
+    validationErrorMsg: Please correct the validation error before navigating
+    validationErrorHeader: Validation error
+    alphabets: Must be alphabets
+    phoneNumber: Invalid phoneNumber
+    password : Invalid Password Format
+    dateRange: Invalid Date Range
+
+
+apiException:
+    500: There is some internal error, We will get back to you shortly.
+    403: Session has expired, Kindly refresh the page and try again.
+    400: Bad Request, something is wrong kindly contact administrator
+    503: Service is unavailable, kindly try again later
+    498: Invalid token, kindly login again
+    499: Token is required, kindly login again
+    401: Unauthorized access, You don't have proper permission, Kindly contact administrator.
+    404: Service is not available, Kindly contact administrator
+    409: A command is in progress on the device, please retry after sometime
+    302: This site can't be reached
+    504: Gateway Timeout, Kindly refresh or login again
+    502: Bad Gateway, Kindly logout and login again
+
+bootstrapContext: 
+    403 : Forbidden request, Either you don't have permission or server can not process the request at this moment.
+    500 : Error while fetching application information. Kindly contact administrator.
+    400 : Bad Request. It's look like user information does't exist. Kindly close all the browser and try again.
+    404 : User does't exist. If you think something is wrong, Please close all the browser and try again or contact administrator. 
+    401 : Unauthorized access, You don't have proper permission, Kindly contact administrator.
+    502 : Bad Gateway, Kindly logout and login again
+    503 : Service is unavailable, kindly try again later.
+    504 : Gateway Timeout, Kindly refresh or login again.
+    Common : Some unknown error has been occured. Kindly contact administrator.

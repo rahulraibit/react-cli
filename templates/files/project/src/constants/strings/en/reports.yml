@@ -1,0 +1,39 @@
+report:
+  reportCreateForm:
+    reportType:
+      label: Report Type
+    reportName:
+      label: Report Name
+      helpText: 30 Characters
+    fromDate:
+      label: From Date & Time
+    toDate:
+      label: To Date & Time
+    layout:
+      label: Layout
+    preview:
+      label: Preview
+    deviceSelection: 
+      label: Device Selection
+      helpText: Select a report type to view options
+      singleDeviceReport: For Single Device Report
+      multipleDeviceReport: For Multi Device Report
+      errorMessage: Please select valid device serial number
+    deviceList:
+      label: Device Serial Numbers
+      name: deviceList
+    userList:
+      label: Users
+      labelKey: Name
+    department:
+      label: Department
+      labelKey: Department
+    dataElement:
+      label: Data Elements
+      helpText: Select a Report Type to view options
+      singleDeviceReport: For {reportName}
+      multipleDeviceReport: For {reportName}
+    emptyLabel: Type to search Device serial Number
+                                  
+                                  
+                                     

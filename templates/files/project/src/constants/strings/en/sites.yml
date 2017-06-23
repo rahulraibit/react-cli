@@ -1,0 +1,22 @@
+site:
+  details:
+    detailsHeader: Site Details 
+    siteLabel: Site Label
+    address1: Address 1
+    address2: Address 2
+    city: City 
+    zip: Zip Code 
+    country: Country/Region 
+    state: State/Province 
+
+    deviceManagement: Device Management
+    deviceManagement.help: Gateway Nodes to be configured
+
+    realtimeMonitoring: RealTime Monitoring
+    realtimeMonitoring.help: Gateway Nodes and Map Setup have to be configured 
+
+    servicesHeader: Services 
+    
+    warningQuestion: Do you want to move away from the screen without saving the changes?
+    warningMessage: Click YES to continue without saving
+

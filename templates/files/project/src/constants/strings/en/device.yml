@@ -1,0 +1,182 @@
+device:
+  details:
+    alarmType: Alarm Type
+    alarmIndicators: Alarm Indicators
+    manDownAlarm: Man-Down Alarm
+    alarmSensitivity: Alarm Sensitivity
+    manDownCustomSensitivity: Man-Down Custom Sensitivity
+    preAlarmAfter: Pre-Alarm After
+    fullAlarmAfter: Full Alarm After
+    manDownIfMotionless: Man-Down If Motionless
+    logOnceEvery: Log Once Every
+    loggedMeasurements: Logged Measurements
+    averageType: Average Type
+    logMap: Log Map
+    logStartType: Log Start Type
+    logMemoryFullAction: Log Memory Full Action
+    systemOption: System Option
+    lastRunTime: Last Run Time
+    autoZero: Auto Zero
+    glanceOptionEnable: Glance Option Enable
+    bLEPower: BLE Power
+    bLEPinNumber: BLE Pin Number
+    bLEMacAddress: BLE Mac Address
+    gPSPower: GPS Power
+    gPSRecoveryPeriod: GPS Recovery Period
+    gPSSearchingPeriod: GPS Searching Period
+    comfortBeep: Comfort Beep
+    startupSpeed: Startup Speed
+    temparatureUnit: Temparature Unit
+    siteID: Site ID
+    userID: User ID
+    passcode: Passcode
+    userMode: User Mode
+    date: Date
+    time: Time
+    dateFormat: Date Format
+    timeFormat: Time Format
+    backLightOption: Back Light Option
+    backLightTrigger: Back Light Trigger
+    lCDContrast: LCD Contrast
+    lEDStatus: LED Status
+    blinkIntervalLED: Blink Interval LED
+    meshPANID: Mesh PAN ID
+    meshChannel: Mesh Channel
+    meshInterval: Mesh Interval
+    meshOffnetAlarm: Mesh Offnet Alarm
+    meshRegionID: Mesh Region ID
+    meshPower: Mesh Power
+    meshConfigAvailable: Mesh Config Available
+    meshRadioType: Mesh Radio Type
+    meshRegionName: Mesh Region Name
+    meshDefaultChannel: Mesh Default Channel
+    meshRoaming: Mesh Roaming
+    wifiPower: Wifi Power
+    wifiMacAddress: Wifi Mac Address
+    wifiChannelMask: Wifi Channel Mask
+    wifiSecurityMode: Wifi Security Mode
+    wifiSecurityKey: Wifi Security Key
+    wifiSSIDAP: Wifi SSID AP
+    gpsPower: GPS Power
+    wifiStaticIP: Wifi Static IP
+    wifiGatewayIP: Wifi Gateway IP
+    wifiNetmaskIP: Wifi Netmask IP
+    wifiRemoteIP: Wifi Remote IP
+    wifiPort: Wifi Port
+    wifiWorkMode: Wifi Work Mode
+    wifiUpdateRate: Wifi Update Rate
+    wifiSSIDAnchor: Wifi SSID Anchor
+    wifiKeyLength: Wifi Key Length
+  manageGasList:
+    gasName: Gas Name
+    gasFormula: Gas Formula
+    gasNumber: Gas Number
+    gasMw: M.W
+    gasSpan: Span
+    gasCF98: CF 9.8
+    gasCF106: CF 10.6
+    gasCF117: CF 11.7
+    gasCFLel: CF LEL
+    gasHighAlarm: High Alarm
+    gasLowAlarm: Low Alarm
+    gasTwaAlarm: TWA Alarm
+    gasStelAlarm: Stel Alarm
+  sensors:
+    AlarmSetpoints: Alarm Setpoints
+    Calibration: Calibration
+    BumpTest: Bump Test
+    LowAlarm: Low Alarm
+    TWAAlarm: TWA Alarm
+    STELAlarm: STEL Alarm
+    Measuring: Measuring
+    CalibratedTo: Calibrated To
+    OverRange: Over Range
+    SpanLevel: Span Level
+    HighAlarm: High Alarm
+    Interval: INTERVAL
+    LowlowAlarmSetPoint: LOW LOW 
+  message: 
+    offline: Device is offline
+    configError: Error while updating device configuration 
+    incorrectCommMode: Communication mode is not correct
+    cantcommunicate: Unable to communicate, please retry after sometime
+    execaborted: Operation aborted, please retry after sometime
+    manualrefresh:
+      commandSubmitted: Your command has been submitted successfully, You will be notified soon
+      failed: Manual refresh failed, Kindly try again later
+      success: Devices status have been updated successfully
+    dataDownload:
+      initiated: Data Download Initiated
+      inProgress: Data Download in Progress
+      alreadyInProgress: Data Download already in Progress
+      failed: Data Download Failed
+      completed: Data Download Successfully Completed
+      timedOut: Data Download Operation Timed out
+      busy: Device is busy, Download cannot be completed
+      cannotCommunicate: Cannot communicate with device, Download cannot be completed
+      unknown: Unknown error occured, Download cannot be completed
+    testDownload:
+      initiated: Test Download Initiated
+      inProgress: Test Download in Progress
+      alreadyInProgress: Test Download already in Progress
+      failed: Test Download Failed
+      completed: Test Download Successfully Completed
+      timedOut: Test Download Operation Timed out
+  history:
+    leftHeader: Showing {attr} of device history
+    rightHeader: Log for {attr}
+    alarm: Alarm
+    alarms: Alarms
+    calibration: Calibration
+    calibrations: Calibrations
+    bumptest: Bump Test
+    bumptests: Bump Tests
+    logs: logs
+    descSensor: Exposure triggered on {attr}
+    descDevice: Exposure triggered on {attr}
+    sessionStart: Session started
+    sessionEnd: Session ended
+    sessionSummaryHeader: session summary
+    calibrationDetailsHeader: calibration details
+    sensorDetailsHeader: sensor details
+    deviceInformationHeader: device information
+    daySessionInfo: Info For Day
+    calibrationDetails:
+      calibrationDate: calibration date
+      measurementGas: Measurement gas
+      correctionFactor: correction factor
+      span1: span point 1
+      span2: span point 2
+    deviceDetails:
+      device: device
+      modelNumber: model number
+      firmwareVersion: firmware version
+      serialNumber: serial number
+      runningMode : running model
+      diagnosticMode: diagnostic mode
+      dialogMode: data log mode
+      stopReason: stop reason
+    sensorDetails:
+      sensorName: sensor Name
+      serialNumber: serial Number
+      unitName: unit Name
+      span: span
+      lowAlarm: low alarm
+      lowLowAlarm: low low alarm
+      highAlarm: high alarm
+      overRange: over Range
+      stelAlarm: stel alarm
+      twaAlarm: twa alarm
+    sessionDetails:
+      startTime: start time
+      endTime: end time
+      duration: duration
+      assignedTo: assigned to
+      records: records
+      interval: interval
+      siteID: site ID
+      userID: user ID
+  devicesAlarm:
+    IAS_PANIC_ALARM: Panic Alarm
+    IAS_MANDOWN_ALARM: ManDown Alarm
+    IAS_BATTERY_LOW: Battery-low Alarm

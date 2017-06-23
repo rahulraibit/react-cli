@@ -1,0 +1,74 @@
+notification:
+    error: Error occurred
+    responseError: Error while getting the data
+    logoutFailed: Logout failed
+    emailAlreadyInUse: Email already in use
+    invalidCurrentPassword: Invalid current password
+    invalidNewPassword: Invalid new password
+    noChangeInPassword: No change in password
+    connectionError : Connection has lost at this moment, We are trying to reconnect
+    bumpTest:
+        bumpTest: Bump Test
+        bumpInitiated: Bump test initiated
+        bumpInitiationFailed: Bump test initiation failed
+        bumpFailed: Bump test failed
+        bumpPassed: Bump test passed
+        DeviceOffline: Bump test initiation failed, device is offline
+    
+    calibration:
+        calibration: Calibration
+        calInitiated: Calibration initiated
+        calInitiationFailed: Calibration initiation failed
+        calFailed: Calibration failed
+        calPassed: Calibration passed
+        DeviceOffline: Calibration test initiation failed, device is offline
+
+    firmwareUpdate:
+        firmwareUpdateInitiated: Firmware updation initiated
+        firmwareUpdateInitiationFailed: Firmware update initiation failed
+        firmwareDownloaded: Firmware download complete. Updaion started
+        firmwareUpdated: Firmware is updated successfully
+        firmwareUpdateFailed: Firmware update failed
+        firmwareUpdateAPIFailed: Error while initiating firmware update
+
+    gatewayUnregister:
+        unregisterSuccess: Gateway unregistered successfully
+        unregisterFailed: Gateway unregistration failed
+        unregisterDuplicateCommand: Duplicate command
+
+    groupManagement:
+        savedSuccessfully: Group details saved successfully
+        addedSuccessfully: Group details added successfully
+        saveFailed: Error while saving group details
+        deleteSuccessfully: 
+        groupDeletedSuccessfully: Group deleted successfully
+        groupDeleteFailed: Error while deleting group
+        duplicateGroupName: Group name already exist
+
+    roleManagement:
+        savedSuccessfully: Role details saved successfully
+        addedSuccessfully: Role details added successfully
+        saveFailed: Error while saving role details
+        roleDeletedSuccessfully: Role deleted successfully
+        roleDeleteFailed: Error while deleting role
+
+    userProfile:
+        profileSaved: Your profile saved successfully
+        profileNotSaved: Error while saving profile.
+
+    userManagement:    
+        USPUserAddSuccess : User Invitation has been sent to user
+        NONUSPUserAddSucess : User has been successfully created
+        UserUpdateSuccess : User Details have been updated successfully
+        duplicateEmailError : Email Id already exists
+        selfRemovalAdminroleError : You can not remove yourself from customer admin role
+        PhonenumberInvalidError : Phone number is not Valid
+        EmailIdChangedError : Email Id can not be change for not activated user
+        InvalidEmailIdError : Email id is not correct
+        EmailIdInUseError : Employee Id is already in use
+        UserNotFoundError : User does not exist
+        ViewStaleError: Another user has updated the view. Please refresh the page
+        userDeactivateSucess : User Deactivated Successfully
+        userDeleteSuccess : User Deleted Successfully
+        userReactivateSucess : User Re-activated successfully
+        userReactivateError : User Can not be Reactivated

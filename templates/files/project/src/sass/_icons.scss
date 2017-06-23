@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+// Mixin to create icons
+@mixin createIcon($iconClass, $prefix: '',$suffix:'', $supportedBehaviors : 'disabled' 'onHover' 'onClick', $width : 32px, $height : 32px) {
+  #{$iconClass} {
+    @include createIconContainer( '../assets/images/#{$prefix}_active#{$suffix}', $width, $height);
+
+    // if disabled icon available
+    @if index($supportedBehaviors,'disabled') != null {
+      &:disabled {
+        background-image: url('../assets/images/#{$prefix}_inactive#{$suffix}');
+      }
+    }
+
+    // if disabled icon available
+    @if index($supportedBehaviors,'onHover') != null {
+      &:hover:not(:disabled) {
+        background-image: url('../assets/images/#{$prefix}_onHover#{$suffix}');
+      }
+    }
+
+    // if disabled icon available
+    @if index($supportedBehaviors,'onClick') != null {
+      &:active {
+        background-image: url('../assets/images/#{$prefix}_onClick#{$suffix}');
+      }
+    }
+  }
+}
+
+// Button icon creator
+@mixin createButtonIcon($iconClass, $prefix: '',$suffix:'', $supportedBehaviors: 'disabled' 'onHover' 'onClick') {
+  #{$iconClass} {
+    border-width: 1px;
+    padding: 0;
+    margin: 0;
+  }
+  @include createIcon($iconClass, $prefix,$suffix, $supportedBehaviors);
+}
+
+// Toolbar icons
+@include createButtonIcon( '.btn.toolbar-icon.add','toolbar/icon_toolbar_add','@1x.png');

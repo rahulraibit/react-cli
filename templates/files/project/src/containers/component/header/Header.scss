@@ -1,0 +1,253 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+$settingsPopoverWidth: 220px;
+$profileImgSize: 35px;
+
+.navbar-default {
+  background-color: cyan;
+}
+
+.navbar.usp-header {
+  border-radius: 0;
+  // background-color: white;
+
+  button.sidebar-menu-button {
+    border: none;
+    margin-left: -1 * $baseUnit / 2;
+    margin-right: 0;
+    background: transparent;
+
+    .usp-navicon {
+      display: inline-block;
+      @include createIcon( '../../../assets/images/toggleBar.png', 21px, 28px, 15px, 20px);
+      background-size: contain;
+    }
+  }
+
+  .navbar-header {
+    .navbar-brand {
+      color: #AAA;
+      margin-top: 3px;
+    }
+
+    .page-section {
+      color: #AAA;
+      font-size: 1.3em;
+      margin-top: 5px;
+      margin-left: 0;
+      padding-left: 0;
+      min-width: 150px;
+
+      .page {
+        padding-left: $padding - 2;
+      }
+    }
+  }
+
+  .status-bar {
+    padding-left: $padding *2;
+  }
+
+  .nav.navbar-nav {
+    li.status {
+      margin-right: 1px;
+      margin-bottom: -6px;
+
+      &.warn a {
+        border-top: 6px solid orange;
+      }
+
+      &.critical a {
+        border-top: 6px solid red;
+      }
+
+      &.good a {
+        border-top: 6px solid green;
+      }
+
+      a {
+        padding: 0 ($padding * 2) 10px ($padding * 2);
+
+        &:hover {
+          background-color: #DDD;
+        }
+
+        .status-heading {
+          font-size: .8em;
+          text-align: center;
+          display: block;
+        }
+
+        .status-footer {
+          display: block;
+          text-align: center;
+          font-size: 1.2em;
+
+          .count {
+            font-size: 1em;
+            padding: 0 0 0 $padding;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .usp-actions-menu {
+    .usp-actions {
+      font-size: 1.5em;
+      // TODO: Understand the scope of this badge and 
+      //   may be make the style globally available
+      &.top-right-badge {
+        // Make the position relative to create the badge absolute to the container
+        position: relative;
+
+        // Use badge with this class unless you know what you are doing
+        .notification-badge {
+          background-color: $selectedColor;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform: translate(50%, -50%);
+        }
+      }
+
+      a {
+        padding-bottom: $baseUnit;
+      }
+    }
+    
+    .notifications {
+      @include createIcon( '../../../assets/images/queueManager/icon_nav_notify_default.png', 25px, 85px, 25px, 25px);
+      display: inline-block;
+      background-size: contain;
+      margin: 0 $margin;
+      cursor: pointer;
+
+      .notification-icon {
+        display: inline-block;
+        width: inherit;
+        height: inherit;
+
+        .action-button {
+          display: inline-block;
+          width: inherit;
+          height: inherit;
+          padding: 0;
+        }
+      }
+    }
+
+    .siteSelector {
+      padding-top: 4px;
+      margin: 0 $margin;
+
+      .dropdown-new-component {
+        min-width: $baseUnit*16;
+
+        .dropdown.btn-group input {
+          background-color: transparent;
+        }
+
+        label.label-top {
+          background-color: $headerLabelBackground;
+        }
+      }
+        ul.dropdown-menu {
+                max-height: $baseUnit*15;
+                overflow: auto;
+            }
+    }
+    .previous-site-url {
+      a {
+       @include boldFont(14px);
+       text-decoration: underline;
+       color: black;
+       margin: 0 $baseUnit;
+      }
+    }
+  }
+}
+
+#notifications-popover,
+#users-popover {
+  .popover-content {
+    padding: 0;
+  }
+  border-color: $popOverBorderColor;
+
+  .arrow {
+    border-bottom-color: $popOverBorderColor;
+    margin-left: 0;
+  }
+}
+
+.usp-nav-dropdown {
+  &.user-actions {
+    width: $settingsPopoverWidth;
+    padding: $padding $padding 0;
+    margin: 0;
+    list-style: none;
+
+    &.item-separator {
+      border-top: 1px solid $popOverBorderColor;
+    }
+
+    .user-action-item {
+      &.item-separator {
+        border-bottom: $horizontalLineBorder;
+        margin-bottom: $padding;
+      }
+
+      .user-option {
+        display: flex;
+        //padding: $baseUnit 0;
+        color: $linkColor;
+        padding-bottom: $padding;
+
+        &:hover {
+          color: $hoveredColor;
+        }
+
+        &.no-link {
+          text-decoration: none;
+        }
+
+        .img-section {
+          width: $profileImgSize;
+
+          .img-icon {
+            border-radius: 50%;
+            width: $profileImgSize;
+          }
+        }
+
+        .menu-item-text {
+          padding-left: $baseUnit;
+
+          .usp-user-name, .usp-user-role {
+            color: $PrimaryTextColor;
+          }
+          
+          @include boldFont();
+
+          .usp-user-name {
+            @include extraBoldFont();
+            @include addEllipsis();
+            width: $baseUnit * 14;
+          }
+
+          .usp-user-role {
+            @include addEllipsis();
+            width: $baseUnit * 14;
+          }
+        }
+      }
+    }
+  }
+}
+
+#users-popover {
+  margin-top: 0;
+}

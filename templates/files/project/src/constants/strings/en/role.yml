@@ -1,0 +1,11 @@
+role: 
+    roleName: ROLE NAME
+    accessToFunctions: Access To Functions
+    userRemoved: User removed successfully
+    userRemoveFailed: User not removed
+    searchByUser: Search by user
+    findByUserGroup: Find by user group
+    AddingUsersToRole: Adding Users to Role
+    
+
+	

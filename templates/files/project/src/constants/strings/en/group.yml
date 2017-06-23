@@ -1,0 +1,13 @@
+group:
+  groupName: Group name
+  associatedSites: Associated Sites
+  emptyLabel: Start Typing Site Name
+  findByUserRole: Find By User Role
+  alreadyExists: Group name already exists
+  delete:
+    confirm:
+      title: Delete User group
+      question: This action will permanently delete the User Group, it's associations with Sites and this data is irrecoverable.
+      message: Do you want to continue deletion?
+      ok: Yes
+      cancel: No 

@@ -1,0 +1,22 @@
+warnings:
+  lossChangesTitle: Changes Not Saved
+  lossChangesWarningQuestion: Do you want to move away from the screen without saving the changes?
+  lossChangesWarningMessage: Click YES to continue without saving
+  pageNotFound: Page Not Found
+  pageNotFoundMessage: This page either doesn't exist, or you are not authorized to access it !
+  loggedOutMessage: Please wait you will be redirected to login page within 5 sec...
+  loggedOutHelper : If you are not redirected to login page within 5 sec, Please
+
+  sessionModalTitle: Session Timeout Warning
+  Logout: Logout
+  logoutMessage: Click 'Cancel' to keep working or 'Logout'
+  logoutMessageNote: Any actions currently running in the background will continue even after you are logged out
+  note: Note
+  SessionExpireMessage: After {remainingTime} more minutes of inactivity, you will be automatically logged out of the application
+
+  passwordChangeMsg: Your password has been changed successfully. Please login again.
+
+  gatewayUnregisterTitle: Unregister Gateway
+  gatewayUnregisterWarningQuestion1: Unregistering the Gateway
+  gatewayUnregisterWarningQuestion2: will disable it immediately. Any data transmission will be stalled
+  gatewayUnregisterWarningMessage: Do you still want to Unregister the Gateway?

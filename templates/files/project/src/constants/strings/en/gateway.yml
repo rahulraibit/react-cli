@@ -1,0 +1,74 @@
+gateway:
+  details:
+    status: STATUS
+    name: GATEWAY NAME
+    ip: IP ADDRESS
+    mac: MAC ADDRESS
+    firmware: FIRMWARE ADDRESS
+    lastlog: LAST LOG DOWNLOAD
+    timeSettings:
+      title: Time Settings
+      timeZone: TIME ZONE
+      dailySyncSchedule: DAILY SYNC SCHEDULE
+      lastSync: LAST SYNC
+    generalSettings:
+      title: General Settings
+      hPriorityUpload: HIGH PRIORITY UPLOAD
+      lPriorityUpload: LOW PRIORITY UPLOAD
+      dbServicePort: DATABASE SERVICE PORT
+      loggingLevel: SET LOGGING LEVEL
+    product:
+      title: Product Services
+      raeservicePort: RAE SERVICE PORT
+      bwservicePort: BW SERVICE PORT
+      dockDiscovery: Allow Dock Discovery
+    wifi:
+      title: WI-FI
+      udp: UDP Settings
+      transmissionPort: TRANSMISSION PORT
+      listeningPort: LISTENING PORT
+    mesh:
+      title: MESH
+      tcp: TCP Settings
+      alarmInterval: ALARM INTERVAL 
+      timeOutPeriod: TIME OUT PERIOD
+      listenPort: LISTEN PORT
+      maxClient: MAX CLIENT
+      enableBackupPort: Enable Backup Port
+      backupPort: BACKUP PORT
+      serialPortSettings: SERIAL PORT SETTINGS 
+      enableSerialPort: Enable Serial Port
+      serialPort: SERIAL PORT
+      baudRate: BAUD RATE
+    location:
+      title: Location Engine
+      port: LOCATION ENGINE PORT
+      transmission: TRANSMISSION
+      active: Active
+      wifiCalibration: WifiCalibration
+      meshCalibration: MeshCalibration
+    ism:
+      title: ISM
+      settings: Settings 
+      comPort: COM Port
+      baudRate: BAUD RATE
+      pollMasterInterval: POLL MASTER INTERVAL 
+      timeOutPeriod: TIME OUT PERIOD
+      maxRetries: MAX RETRIES
+      unitId: UnitIDs
+      alarmNotification: Nearby Alarm Notifiction
+      broadcastAlarm: Broadcast Alarm
+      alarmInterval: ALARMING INTERVAL
+  devicesList:
+    product: Product
+    ipAddress: Search IP ADDRESS
+    port: port
+    message:
+      commandSuccess: Command executed successfully
+      assign: Dock assigned successfully
+      assignFailed: Dock assigning failed
+      unAssign: Dock unassigned successfully
+      unAssignFailed: Dock unassigning failed
+      duplicateIP: Duplicate IP address, dock with the provided IP already exists
+  error:
+    range: "{minValue} & {maxValue}"
