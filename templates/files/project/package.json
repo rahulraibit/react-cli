@@ -36,12 +36,14 @@
     "react-dnd-html5-backend": "^2.1.2",
     "react-dom": "^15.6.1",
     "react-overlays": "^0.6.10",
+    "react-redux": "^5.0.5",
     "react-router": "^2.8.0",
     "react-router-redux": "^4.0.5",
     "react-shallow-testutils": "^2.0.0",
     "react-themeable": "^1.1.0",
     "redux": "^3.6.0",
     "redux-multi": "^0.1.12",
+    "redux-thunk": "^2.2.0",
     "yaml-loader": "^0.4.0"
   },
   "devDependencies": {

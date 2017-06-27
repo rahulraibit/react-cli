@@ -1,6 +1,6 @@
 {
   "name": "react-component-cli",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "It will generate template for your component",
   "main": "index.js",
   "scripts": {
