@@ -45,7 +45,7 @@ export default class Header extends Component {
         let page = this.props.pageTitle;
         let pageMarkup = '';
         if (page != null) {
-            pageMarkup = (<span className="navbar-brand page-section"><span className="">|</span><span className="page">HASHEDIN</span></span>);
+            pageMarkup = (<span className="navbar-brand page-section"><span className="">|</span><span className="page">COMPANY</span></span>);
         }
 
         return (
@@ -133,7 +133,7 @@ export default class Header extends Component {
                                 </ul>
                             </div> : <ul className="nav navbar-nav navbar-right">
                                 <li className="usp-actions">
-                                    <a href="#" className="dropdown-toggle">
+                                    <a href="/login" className="dropdown-toggle">
                                         <span className="utility-icon help">Login</span>
                                     </a>
                                 </li>

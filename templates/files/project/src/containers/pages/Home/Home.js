@@ -29,9 +29,10 @@ export default class Home extends Component {
     }
 
     render() {
+        const { children } = this.props;
         return (
             <div className='row flex-stretch body-content' ref='image_slide'>
-
+                {children}
             </div>
         )
     }

@@ -86,24 +86,20 @@
 
 
 @mixin boldFont ($size : $fontSize){
-    font-family: $fontFamilyBold;
     font-size : $size;
     letter-spacing: -.25px;
 }
 
 @mixin extraBoldFont ($size : $fontSizeLarge){
-    font-family: $fontFamilyExtraBold;
     font-size : $size;
     letter-spacing: -.25px;
 }
 
 @mixin mediumFont ($size : $fontSizeSmall){
-    font-family: $fontFamilyMedium;
     font-size : $size;
 }
 
 @mixin paraFont ($size : $fontSizeSmall){
-    font-family: $fontFamily;
     font-size : $size;
     // line-height: 15px;
 }
@@ -171,13 +167,11 @@
 }
 
 @mixin helpTextFont($size: $fontSizeSmaller) {
-  font-family: $fontFamily;
   font-size: $size;
   letter-spacing: -.25px;
 }
 
 @mixin componentLabel($size: $fontSizeSmall){
-  font-family: $fontFamily;
   font-size: $size;
   color : $headerColor;
 }

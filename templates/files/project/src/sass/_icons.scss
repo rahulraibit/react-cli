@@ -39,5 +39,3 @@
   @include createIcon($iconClass, $prefix,$suffix, $supportedBehaviors);
 }
 
-// Toolbar icons
-@include createButtonIcon( '.btn.toolbar-icon.add','toolbar/icon_toolbar_add','@1x.png');

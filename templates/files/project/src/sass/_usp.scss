@@ -106,11 +106,9 @@ html {
 }
 
 input {
-  font-family: $fontFamily;
 }
 
 b {
-  font-family: $fontFamilyBold;
 }
 
 h1,
@@ -137,12 +135,6 @@ h3 {
       content: ' ';
     }
   }
-}
-
-div,
-label,
-p {
-  font-family: $fontFamily;
 }
 
 .usp-scrollbar {

@@ -93,14 +93,12 @@ $modalLargeWidth: 1015px;
         outline: none;
         color: $PrimaryTextColor;
         border-color: transparent;
-        font-family: $fontFamilyMedium;
         border-bottom: 3px solid $nav-tabs-active-link-hover-border-color;
       }
     }
 
     > a {
       color: $focusedInputTextColor;
-      font-family: $fontFamilyMedium;
 
       &:focus {
         outline: none;
@@ -124,7 +122,6 @@ $modalLargeWidth: 1015px;
 
   li {
     font-size: 1.4em;
-    font-family: $fontFamilyBold;
 
     &,
     &:focus {

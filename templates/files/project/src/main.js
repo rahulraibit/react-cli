@@ -13,6 +13,7 @@ import App from './containers/App'
 import { getUserContext } from './actions'
 import Home from './containers/pages/Home/Home'
 import T from 'i18n-react';
+import login from './containers/pages/login/Login'
 export const store = configureStore();
 
 
@@ -29,8 +30,9 @@ function onEnterHook(state, replace) {
 var route = (
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={App} id="LAYOUT">
+            <Route path="/" component={App} onEnter={onEnterHook} id="LAYOUT">
                 <Route path="/Home" component={Home} id="HOME">
+                    <Route path="/login" component={login} id='LOGIN' />
                 </Route>
             </Route>
         </Router>

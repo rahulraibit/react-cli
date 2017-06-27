@@ -194,43 +194,7 @@ input[type='checkbox'] {
   }
 }
 
-// TO BE REMOVED (Current used in textarea)
-// .usp-ui-component {
-//   position:relative;
-//   display: table;
-//   border-collapse: separate;
-//   width: 100%;
-//   input, textarea, select {
-//     @include boldFont($fontSize);
-//     padding:($baseUnit + 5) $baseUnit ($baseUnit / 2);
-//     display:block;
-//     border:$defaultBorder;
-//     width: 100%;
-//     border-radius: 0;
-//     box-shadow: none;
-//     &:focus {
-//       outline:none;
-//       border: $focusedBorder;
-//         box-shadow: none;
-//     }
 
-//     &:focus ~ label, &:valid ~ label {
-//       @include valid-input-label();
-//     }
-//   }
-
-//   &.readonly > label {
-//     @include valid-input-label();
-//   }
-
-//   &.required > label span {
-//     display: inline-block;
-//   }
-
-//   label {
-//     @extend .placeholderLabel;
-//   }
-// }
 
 // Heading styles
 .page-heading {

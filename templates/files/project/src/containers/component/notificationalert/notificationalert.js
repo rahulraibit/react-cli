@@ -2,9 +2,9 @@
  *  Stays for 7sec and then hides off automatically
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Notification from '../../../components/Notifications/Notifications'
+import Notification from './../../../components/notification/Notifications'
 import { DialogHide } from '../../../actions'
 
 let UspNotificationAlert = class extends Component {

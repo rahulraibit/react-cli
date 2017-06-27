@@ -1,0 +1,110 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+$alertTopPosition: 58px;
+$alertborderSize: 2px;
+
+.uspalert {
+  position: fixed;
+  z-index: 999999;
+  width: $halfPercent/2;
+  min-height: $minRowHeight;
+  display: flex;
+  border-radius: alertborderSize;
+  background-color: $primaryBgColor;
+  margin: 7px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.7s;
+  .icon {
+    div {
+      height: 100%;
+      width: 33px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .ERROR-icon {
+      background-color: $alertFailureColor;
+      &::before {
+        content: "\f12a";
+        color: $primaryBgColor;
+      }
+    }
+    .SUCCESS-icon {
+      background-color: $alertSucccessColor;
+      &::before {
+        content: "\f00c";
+        color: $primaryBgColor;
+      }
+    }
+  }
+  .message {
+    @include mediumFont();
+    flex: 3;
+    text-transform: none;
+    padding: $padding (2 * $padding)  $padding  $padding;
+    label {
+      margin: 0;
+    }
+    .handler {
+      padding: 0 $baseUnit;
+      float: right;
+    }
+  }
+  .alert-close {
+    margin: $baseUnit;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    .closeIcon {
+      @include createIconContainer('../../assets/images/utilities/icon_close_small@2x.png', 10.5px, 10.5px);
+    }
+  }
+}
+
+.SUCCESS {
+  border: $alertborderSize solid $alertSucccessColor;
+}
+
+.ERROR {
+  border: $alertborderSize solid $alertFailureColor;
+}
+
+.top-right {
+  right: 0;
+  top: $alertTopPosition;
+}
+
+.bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+.top-left {
+  left: 4%;
+  top: $alertTopPosition;
+}
+
+.bottom-left {
+  left: 4%;
+  bottom: 0;
+}
+
+.top-center {
+  left: 38%;
+  right: auto;
+  top: $alertTopPosition;
+}
+.bottom-center{
+  left: 38%;
+  right: auto;
+  bottom: 0;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {right: -300px; opacity: 0}
+    to {right: 0; opacity: 1}
+}
