@@ -20,7 +20,6 @@ $profileImgSize: 35px;
 
     .usp-navicon {
       display: inline-block;
-      @include createIcon( '../../../assets/images/toggleBar.png', 21px, 28px, 15px, 20px);
       background-size: contain;
     }
   }
@@ -119,7 +118,6 @@ $profileImgSize: 35px;
     }
     
     .notifications {
-      @include createIcon( '../../../assets/images/queueManager/icon_nav_notify_default.png', 25px, 85px, 25px, 25px);
       display: inline-block;
       background-size: contain;
       margin: 0 $margin;

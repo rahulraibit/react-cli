@@ -54,7 +54,6 @@ $modalLargeWidth: 1015px;
 
       &:before {
         content: '';
-        @include createIconContainer( './../../assets/images/utilities/icon_close@1x.png', 16px, 16px);
         position: absolute;
         top: $baseUnit;
         right: $baseUnit;
@@ -344,7 +343,6 @@ input[readonly] {
 }
 
 .caret {
-  @include createIcon( './assets/images/dropdown_carat_active.png', 6px, 9px, 6px, 9px);
   border: none;
 }
 @import './typeahead'

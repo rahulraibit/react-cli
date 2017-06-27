@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import T from 'i18n-react';
 import ListItem from './ListItem'
-import userDefaultImage from './../../../assets/images/User/profile_pic_placeholder@2x.png'
 
 let UserAction = class extends React.Component {
   constructor(props) {

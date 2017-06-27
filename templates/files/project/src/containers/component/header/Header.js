@@ -4,10 +4,7 @@ Import all the dependencies required
 *****************************************************************************/
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import UspPopover from './../../../components/UspPopover/UspPopover'
 import headerStyles from './Header.scss';
-import UspModal from './../uspmodal/UspModal'
-import Footer from './../footer/Footer'
 import Popover from 'react-bootstrap/lib/Popover'
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger'
 import { connect } from 'react-redux';

@@ -8,10 +8,6 @@ import PropTypes from 'prop-types';
 import Header from './component/header/Header'
 import SideBar from './component/sidebar/Sidebar';
 import classNames from 'classnames';
-import UspDialogBox from '../components/DialogWindow/UspDialogBox'
-import UspNotificationAlert from './component/notificationalert/notificationalert'
-import Footer from './component/footer/Footer'
-import UspModal from './component/uspmodal/UspModal'
 import T from 'i18n-react';
 
 
