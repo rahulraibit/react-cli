@@ -19,7 +19,7 @@ exports.generateTemplate = function (templateName, fileName, type, replaceableIt
         // replace the className with user classname.
         var result = data;
         if (replaceableItem && replacedWith) {
-            result = data.replace(replaceableItem, replacedWith);
+            result = data.replace(new RegExp(replaceableItem, 'g'), replacedWith);
         }
         // write the container template data to user created container.
         fs.writeFile(fileName + '.js', result, 'utf8', function (err) {
