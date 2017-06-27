@@ -9,7 +9,9 @@ file, Action creator file, reducer file and its very easy to use.
 ```````
 ### Note
 
-This project is under development and will update on regular basis. If you feel any issue please raise it and yours suggestion is more welcome for making this project more useful.
+This project is under development and will update on regular basis. 
+If you feel any issue please raise it.
+Yours suggestion is more welcome for making this project more useful.
 
 ```````
 
@@ -18,9 +20,13 @@ This project is under development and will update on regular basis. If you feel 
 ```
 npm install -g react-cli
 
+<!--type -->
+
 react-cli 
 
 If you want to create sample project and want to play with react 
+
+<!--type -->
 
 init
 
@@ -35,6 +41,7 @@ init
 3. create --file container -f fileName
 
 4. create --file press tab tab : It will show the option for creating the different type of file
+
 ```
 
 ### Building the project and creating distributables
@@ -66,7 +73,7 @@ npm run lint
 
 ### Running the express server for mock apis
 
-//Under development 
+<!--Under development -->
 
 npm run api
 
